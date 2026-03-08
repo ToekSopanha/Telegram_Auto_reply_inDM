@@ -24,4 +24,5 @@ In your case specifically:
 Your auto-reply and video-download bots need to run 24/7
 Without pm2, if they crash at 3am you wouldn't know
 With pm2, they restart themselves automatically without you doing anything
-Think of pm2 like a babysitter for your scripts — it watches them and brings them back to life if they die. 😊 so find the command and learn how to use it by yourseft :) 
+Think of pm2 like a babysitter for your scripts — it watches them and brings them back to life if they die. 😊 
+so find the command and learn how to use it by yourseft :) 
