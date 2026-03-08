@@ -1,3 +1,27 @@
 python3 -m venv env
+source venv/bin/activate    => for linux or Mac
 pip3 install telethon
 python3 main.py
+
+if you want to run that script none stop on ubuntu server or onther Linux
+
+npm install -g pm2@latest
+
+pm2 is a process manager that solves these problems:
+Without pm2:
+You run python3 main.py → close terminal → ❌ script stops
+Script crashes → ❌ stays dead until you manually restart
+Server reboots → ❌ nothing starts automatically
+You have to nohup everything manually
+With pm2:
+✅ Scripts keep running even after you close terminal
+✅ Scripts auto restart if they crash
+✅ Scripts auto start when server reboots
+✅ Easy to manage multiple scripts with one command
+✅ Built-in logs for each script
+✅ Monitor CPU and memory usage
+In your case specifically:
+Your auto-reply and video-download bots need to run 24/7
+Without pm2, if they crash at 3am you wouldn't know
+With pm2, they restart themselves automatically without you doing anything
+Think of pm2 like a babysitter for your scripts — it watches them and brings them back to life if they die. 😊 so find the command and learn how to use it by yourseft :) 
