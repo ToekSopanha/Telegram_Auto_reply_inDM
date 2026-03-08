@@ -12,7 +12,7 @@ KHMER_GREETINGS = [
     'សួស្ដី', 'សួស្តី', 'ហេឡូ', 'អរុណសួស្តី',
     'រាត្រីសួស្តី', 'ទិវាសួស្តី', 'សុខសប្បាយទេ',
     'ជម្រាបសួរ'
-]
+]    # You can chang this and put whatever you want :)
 
 def has_emoji(text):
     for char in text:
@@ -35,12 +35,12 @@ async def my_event_handler(event):
     # If you sent a message in last 60 seconds, don't auto reply
     if chat_id in last_sent:
         seconds_since = (now - last_sent[chat_id]).total_seconds()
-        if seconds_since < 60:
+        if seconds_since < 60: # you can chang time whatever you want 
             return
 
     text = event.raw_text.lower() if event.raw_text else ""
 
-    has_greeting = 'hello' in text or 'hi' in text
+    has_greeting = 'hello' in text or 'hi' in text    # You can chang this and put whatever you want :)
     has_khmer    = any(word in event.raw_text for word in KHMER_GREETINGS) if event.raw_text else False
     has_sticker  = event.sticker is not None
     has_voice    = event.voice is not None
