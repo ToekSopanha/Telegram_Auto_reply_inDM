@@ -3,8 +3,8 @@ import unicodedata
 from datetime import datetime, timezone
 from telethon import TelegramClient, events
 
-api_id = 33912409
-api_hash = 'b12993fde9a9ee6f398222298cb52874'
+api_id = YOUR API ID
+api_hash = 'YOUR API HASH'
 
 client = TelegramClient('anon', api_id, api_hash)
 
